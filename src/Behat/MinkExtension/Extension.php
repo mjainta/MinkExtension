@@ -288,6 +288,9 @@ class Extension implements ExtensionInterface
                                 scalarNode('browser')->
                                     defaultValue(isset($config['selenium2']['capabilities']['browser']) ? $config['selenium2']['capabilities']['browser'] : 'firefox')->
                                 end()->
+                                scalarNode('marionette')->
+                                        defaultValue(isset($config['selenium2']['capabilities']['marionette']) ? $config['selenium2']['capabilities']['marionette'] : 'false')->
+                                end()->
                                 scalarNode('ignoreZoomSetting')->
                                     defaultValue(isset($config['selenium2']['capabilities']['ignoreZoomSetting']) ? $config['selenium2']['capabilities']['ignoreZoomSetting'] : 'false')->
                                 end()->
